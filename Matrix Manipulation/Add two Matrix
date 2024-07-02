@@ -1,0 +1,37 @@
+
+def Matrix(m,n):
+    out=[]
+    for i in range(m):
+        row=[]
+        for j in range(n):
+            inp=int(input(f"Enter out[{i}],[{j}]"))
+            row.append(inp)
+        out.append(row)
+
+    return out
+    
+def SUMI(A,B):
+        output=[]
+        for i in range(len(A)):
+            row=[]
+            for j in range(len(A[0])):
+                row.append(A[i][j]+B[i][j])
+            output.append(row)
+        return output        
+
+
+m=int(input("Enter number of m\n"))
+n=int(input("Enter number of n\n"))
+print("Enter Matrix A")
+A=Matrix(m,n)
+print(A)
+print("Enter Matrix B")
+B=Matrix(m,n)
+
+print(B)
+
+print("Enter Matrix S")
+
+sum_matrix=SUMI(A,B)
+
+print(sum_matrix)
